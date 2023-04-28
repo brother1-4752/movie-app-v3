@@ -1,8 +1,5 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Home from "./Routes/Home";
-
-// import Coin from "./routes/Coin";
-// import Coins from "./routes/Coins";
 
 interface RouterElement {
   id: number;
@@ -20,7 +17,7 @@ const routerData: RouterElement[] = [
   },
 ];
 
-export const routers = createBrowserRouter(
+const router = createBrowserRouter(
   routerData.map((router) => {
     return {
       path: router.path,
@@ -29,23 +26,4 @@ export const routers = createBrowserRouter(
   })
 );
 
-// interface IRouterProps {
-//   toggleDark: () => void;
-//   isDark: boolean;
-// }
-
-// function Router({ toggleDark, isDark }: IRouterProps) {
-//   return (
-//     <BrowserRouter>
-//       <Switch>
-//         <Route path="/:coinId">
-//           <Coin isDark={isDark} />
-//         </Route>
-//         <Route path="/">
-//           <Coins toggleDark={toggleDark} />
-//         </Route>
-//       </Switch>
-//     </BrowserRouter>
-//   );
-// }
-// export default Router;
+export default router;
