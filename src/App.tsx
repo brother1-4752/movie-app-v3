@@ -3,7 +3,8 @@ import { isDarkAtom } from "./atoms";
 import { useRecoilValue } from "recoil";
 import { darkTheme, lightTheme } from "./theme";
 import GlobalStyle from "./GlobalStyle";
-import Home from "./Routes/Home";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Router";
 
 function App() {
   const isDark = useRecoilValue(isDarkAtom);
@@ -12,7 +13,7 @@ function App() {
     <>
       <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
         <GlobalStyle />
-        <Home />
+        <RouterProvider router={router} />
       </ThemeProvider>
     </>
   );
