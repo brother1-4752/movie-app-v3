@@ -7,7 +7,7 @@ const HeaderList = styled.ul`
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #d6e0ea;
 `;
 
 function Header() {
